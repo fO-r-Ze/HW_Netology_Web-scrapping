@@ -29,7 +29,7 @@ for card in cards:
 
         if article_content:
             # Извлекаем весь текст статьи
-            text_elements = article_content.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7', 'h8', 'h9', 'li'])
+            text_elements = article_content.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li'])
             article_text = ' '.join([elem.get_text(strip=True) for elem in text_elements]).replace('\xa0', ' ').replace('  ', ' ')
         else:
             article_text = "Текст статьи не найден"
